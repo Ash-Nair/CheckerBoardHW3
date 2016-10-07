@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <title>Checkers Board</title>
+    </head>
+    <body style = "background-color: LightSlateGray">
+        <!-- Div for the board border-->
+        <div id= "border">
+        <!-- Div for the black squares on checker board-->
+        <div id = "one"></div>
+            <div id = "two"></div>
+            <div id = "three"></div>
+            <div id = "four"></div>
+            <div id = "five"></div>
+            <div id = "six"></div>
+            <div id = "seven"></div>
+            <div id = "eight"></div>
+            <div id = "nine"></div>
+            <div id = "ten"></div>
+            <div id = "eleven"></div>
+            <div id = "twelve"></div>
+            <div id = "thirteen"></div>
+             <div id = "fourteen"></div>
+             <div id = "fifteen"></div>
+             <div id = "sixteen"></div>
+             <div id = "seventeen"></div>
+             <div id = "eighteen"></div>
+             <div id = "nineteen"></div>
+             <div id = "twenty"></div>
+             <div id = "twentyone"></div>
+             <div id = "twentytwo"></div>
+             <div id = "twentythree"></div>
+             <div id = "twentyfour"></div>
+             <div id = "twentyfive"></div>
+             <div id = "twentysix"></div>
+             <div id = "twentyseven"></div>
+             <div id = "twentyeight"></div>
+             <div id = "twentynine"></div>
+             <div id = "thirty"></div>
+             <div id = "thirtyone"></div>
+             <div id = "thirtytwo"></div>
+             <div id = "thirtythree"></div>
+        <!-- Div for the white checker pieces border-->
+            <div id= "white1"></div>
+            <div id= "white2"></div>
+            <div id= "white3"></div>
+            <div id= "white4"></div>
+            <div id= "white5"></div>
+            <div id= "white6"></div>
+            <div id= "white7"></div>
+            <div id= "white8"></div>
+            <div id= "white9"></div>
+            <div id= "white10"></div>
+            <div id= "white11"></div>
+            <div id= "white12"></div>
+ <!-- Div for the red checker pieces border-->
+            <div id= "red1"></div>
+            <div id= "red2"></div>
+            <div id= "red3"></div>
+            <div id= "red4"></div>
+            <div id= "red5"></div>
+            <div id= "red6"></div>
+            <div id= "red7"></div>
+            <div id= "red8"></div>
+            <div id= "red9"></div>
+            <div id= "red10"></div>
+            <div id= "red11"></div>
+            <div id= "red12"></div>
+
+        </div>
+    </body>
+    <script>
+        var p1= document.querySelector("#white1");
+        var container= document.querySelector("#border");
+ container.addEventListener("click",getClickPosition,false);
+        function getClickPosition(e){
+            var cpoistion = e.clientX-(p1.offsetWidth/2);
+            var vposition = e.clientY-(p1.offsetHeight/2);
+            var translate3dvalue = "translate3d(" + cpoistion+"px,"+ vposition + "px, 0)";
+            p1.style.transform= translate3dvalue;
+        }
+
+    </script>
+</html>
